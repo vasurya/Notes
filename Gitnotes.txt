@@ -1,0 +1,84 @@
+Version Control:
+	Keeping track of changes in source code
+	Heplful in group and single projects
+
+Files : called blobs
+Folders: called trees
+Commit: versions of code, each having a pointer to it's parent
+		metadata: author
+		()<-()<-()
+			^\()
+
+Object = blob/tree/commit
+
+Git history is immutable/unchangable
+
+All git command lines are manipulations of references data or object data
+first, we add the required file to git add which is the staging area.
+then, we use git commit that creates a new circle/version in the above diagram
+
+To show git log in graph mode,
+git log --all --graph --decorate
+
+NOTE: for more compact representation,git log --all --graph --decorate --oneline
+
+master -> refers to main branch of development, refers to the latest version of your code
+
+Head -> where you are currently looking
+
+Github simply hosts your git repository online. Git is independent from github
+
+to move around versions, use command 
+git checkout "THE STARTING CHARACTERS OF HASH CODE 
+FOR THE VERSION YOU WANT TO MOVE TO"
+
+it makes changes to the directory, so dangerous command
+
+you make changes,not committed, but don't want to either and go back to the way things were. Use checkout to the file name to go back to the latest commit
+
+git checkout hello.txt -> removes the unwanted modifications
+
+git branch lists out all the branches currently in the repo
+
+git branch b2 will make a new branch b2 pointing to the same place as the master
+
+git merge k will merge k branch with master, make sure to do checkout master before merging
+
+git merge --abort will undo the latest merge
+
+in case of conflict, resolve it, then add the file, then do git merge --continue
+
+git remote -  a copy of your git repository somewhere else
+git remote add <name> <url> - making your local rep aware of the existence of the remote clone
+
+git push is used to copy branches from local to remote
+git push <remotename> <localbranch>:<remotebranch>
+
+now remote branch also points to same address as local branch
+
+git clone is used to copy a repo from online, or remote
+git clone --shallow will only copy the latest snapshot without all the commits
+
+
+to update changes in remote based on changes in local
+, use git branch --set-upstream-to=<remotename>/<branchname>
+then we can just use "git push" to update changes
+
+git fetch on remote to get the above changes
+git pull instead of git fetch will also fast forward the master
+
+
+git blame is used to find who made a commit
+
+git stash to temporarily store added changes which are removed from file
+git stash -pop to reinstate
+
+
+.gitignore -> don't care about them
+add file names or patterns of file names in the .gitignore file
+
+There are git GUI tools
+
+
+
+
