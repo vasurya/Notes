@@ -1,0 +1,24 @@
+
+Matches method is used for regex in java
+. - placeholder->any character except escape character can be placed, not to be empty
+? - the preceding character can appear or not
+
+[a-v] - any single character from a to v. [a-v0-9]- any single thing from "a" to "v" or 0 to 9
+[^abc] - anything except a,b,c
+// when you want to use . or ? not for regex, use // before to relieve them of their duties
+
+Check Shorthands
+d- digit
+s - space
+b - boundary
+w - alphanumeric
+capitals of above mean not including those above
+"\\bcat"-> strings that start with cat
+
+Quantifiers
+
+    + matches one or more repetitions of the preceding character;
+    * matches zero or more repetitions of the preceding character;
+    {n} matches exactly n repetitions of the preceding character;
+    {n,m} matches at least n but not more than m repetitions of the preceding character;
+    {n,} matches at least n repetitions of the preceding character;
